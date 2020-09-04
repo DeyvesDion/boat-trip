@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <section class="featuredBoat">
             <h2 class="subTitle">
                 Les plus populaire
@@ -11,7 +11,7 @@
                     md="4"
                     lg="4"
                     xl="3"
-                    v-for="(boad, index) in boads"
+                    v-for="(boat, index) in boats"
                     :key="index"
                 >
                     <b-card
@@ -22,9 +22,9 @@
                         style="max-width: 50rem; cursor:pointer"
                         class="mb-2"
                     >
-                        <h4 class="mb-2">{{ boad.name }}</h4>
+                        <h4 class="mb-2">{{ boat.name }}</h4>
                         <b-card-text>
-                            {{ boad.description }}
+                            {{ boat.description }}
                         </b-card-text>
 
                         <b-button class="btnLocation" href="#">Louer</b-button>
@@ -38,31 +38,10 @@
 <script>
 export default {
     name: "PopularBoad",
-    data() {
-        return {
-            boads: [
-                {
-                    name: "Voilier",
-                    description:
-                        "Louez votre voilier à un particulier ou un loueur professionnel.",
-                },
-                {
-                    name: "Bateau à moteur",
-                    description:
-                        "La location de bateau à moteur entre particuliers et à un professionnel n’a jamais été aussi simple.",
-                },
-                {
-                    name: "Catamaran",
-                    description:
-                        "Louez votre Catamaran à un particulier ou un loueur professionnel.",
-                },
-                {
-                    name: "Semi-rigide",
-                    description:
-                        "Louez votre Semi-rigide à un particulier ou un loueur professionnel.",
-                },
-            ],
-        };
+    computed: {
+        boats() {
+            return this.$store.state.boats;
+        },
     },
 };
 </script>

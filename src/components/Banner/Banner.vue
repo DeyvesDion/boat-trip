@@ -48,7 +48,7 @@
 
                         <b-form-select
                             v-model="formDestination.boatType"
-                            :options="options"
+                            :options="boatsType"
                             class="form-item boatType"
                         ></b-form-select>
                         <input
@@ -61,35 +61,13 @@
                 </div>
             </form>
         </div>
-        <!-- <div class="sicial">
-            <ul class="socialItem">
-                <li>
-                    <a href="#"
-                        ><img src="../../assets/instagram.png" alt="instagram"
-                    /></a>
-                </li>
-                <li>
-                    <a href="#"
-                        ><img src="../../assets/facebook.png" alt="facebook"
-                    /></a>
-                </li>
-                <li>
-                    <a href="#"
-                        ><img src="../../assets/twitter.png" alt="twitter"
-                    /></a>
-                </li>
-            </ul>
-        </div> -->
     </div>
 </template>
 
 <script>
-import HotelDatePicker from "vue-hotel-datepicker";
 export default {
     name: "Banner",
-    components: {
-        HotelDatePicker,
-    },
+    components: {},
     data() {
         return {
             formDestination: {
@@ -98,15 +76,12 @@ export default {
                 endOfReservation: "",
                 boatType: null,
             },
-
-            options: [
-                { value: null, text: "Type de bateau" },
-                { value: "Voilier", text: "Voilier", description: "ok" },
-                { value: "Bateau à moteur", text: "Bateau à moteur" },
-                { value: "Catamaran", text: "Catamaran" },
-                { value: "Semi-rigide", text: "Semi-rigide" },
-            ],
         };
+    },
+    computed: {
+        boatsType() {
+            return this.$store.state.boatsType;
+        },
     },
     methods: {
         submitDestination() {
