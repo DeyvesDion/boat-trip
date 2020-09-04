@@ -1,0 +1,119 @@
+/* form {
+    display: none;
+} */
+
+.banner {
+    /* height: calc(100vh - 60px); */
+    height: 100vh;
+    /* margin-top: -20px; */
+    background-image: url(../../assets/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .bannerTitle {
+    color: #fff;
+    font-size: 65px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.banner .bannerSubTitle {
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.form-item {
+    width: 200px;
+    margin: 5px;
+    border: solid 2px #7451EB;
+    border-radius: 1px;
+}
+
+.form-item:focus,
+.form-item:active {
+    outline: none;
+}
+
+.form-item-datepicker {
+    width: 200px;
+    margin: 5px;
+    border: solid 2px #7451EB;
+    border-radius: 1px;
+}
+
+.form-item-datepicker:focus,
+.form-item-datepicker:active {
+    outline: none;
+}
+
+.boatType {
+    height: 48px;
+}
+
+.search-box {
+    padding: 10px;
+}
+
+.search-btn {
+    /* height: 50px; */
+    /* width: 170px; */
+    background: #7451EB;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #fff;
+    color: #7451EB;
+    border: solid 2px #7451EB;
+}
+
+.form-box {
+    /* margin-left: 21%; */
+    /* margin-right: 100px; */
+    /* width: 60%; */
+    /* margin: 50px; */
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px 50px;
+
+}
+
+/* .socialItem {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+/* .socialItem li {
+    list-style: none;
+} */
+
+/* .socialItem li a {
+    display: inline-block;
+    text-decoration: none;
+    transform: scale(0.5);
+} */
+
+/* .sicial .socialItem img {
+    height: 60px;
+    height: 60px;
+} */
+
+/* .sicial .socialItem img:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+} */

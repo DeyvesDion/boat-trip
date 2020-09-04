@@ -1,0 +1,49 @@
+.featuredDestinations .subTitle {
+    margin: 60px 40px;
+    text-align: center;
+}
+
+.featuredDestinations .img {
+    height: 75vh;
+    background-image: url(../../assets/corse.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.featuredDestinations .img .title {
+    color: #fff;
+    font-size: 65px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.featuredDestinations .img .subTitle {
+    margin-top: 0.5px;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.featuredDestinations .img input {
+    padding: 5px 50px;
+    width: 200px;
+    border: 2px solid #7451EB;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.5em;
+    transition: all 1.3s linear;
+}
+
+.featuredDestinations .img input:hover {
+    color: #7451EB;
+    border: 2px solid #7451EB;
+    background-color: #fff;
+}
