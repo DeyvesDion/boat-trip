@@ -1,4 +1,4 @@
-.estimation {
+.estimate {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,16 +7,16 @@
     margin: 80px 40px;
 }
 
-.estimation .title {
+.estimate .title {
     text-align: center;
     font-size: 22px;
 }
 
-.estimation .subTitle {
+.estimate .subTitle {
     font-size: 15px;
 }
 
-.estimation input {
+.estimate input {
     padding: 10px 50px;
     border: 2px solid #7451EB;
     background-color: transparent;
@@ -25,7 +25,7 @@
     transition: all 1.3s linear;
 }
 
-.estimation input:hover {
+.estimate input:hover {
     color: #fff;
     border: 2px solid #7451EB;
     background-color: #7451EB;

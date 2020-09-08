@@ -5,7 +5,11 @@
                 <h2 class="subTitle">
                     Destination à la une
                 </h2>
-                <div class="img" title="Visiter la corse">
+                <div
+                    class="img"
+                    title="Visiter la corse"
+                    @click="featuredDestination"
+                >
                     <h2 class="title">
                         La corse
                     </h2>
@@ -31,6 +35,7 @@
                     :key="index"
                 >
                     <div
+                        @click="favoriteDestination(destination.name)"
                         class="card mb-2"
                         style="max-width: 50rem; cursor:pointer"
                     >
@@ -46,7 +51,7 @@
                             <p class="card-text">
                                 {{ destination.description }}
                             </p>
-                            <b-button class="btnLocation" href="#"
+                            <b-button class="btnLocation"
                                 >Visiter {{ destination.name }}
                             </b-button>
                         </div>
@@ -63,6 +68,21 @@ export default {
     computed: {
         destinations() {
             return this.$store.state.destinations;
+        },
+    },
+    methods: {
+        featuredDestination() {
+            this.$router.push({
+                name: "FeaturedDestination",
+            });
+        },
+
+        favoriteDestination(destinationName) {
+            // dN: featured destination name you can seen on rooter/index.js
+            this.$router.push({
+                name: "FavoriteDestination",
+                params: { dN: destinationName },
+            });
         },
     },
 };

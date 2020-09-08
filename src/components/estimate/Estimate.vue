@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <section class="estimation">
+        <section class="estimate">
             <div>
                 <h2 class="title">
                     Vous êtes propriétaire de bateau ?<br />
@@ -9,6 +9,7 @@
                     >
                 </h2>
                 <input
+                    @click="myEstimate"
                     type="button"
                     value="Faire mon estimation"
                     title="Faire mon estimation"
@@ -20,8 +21,15 @@
 
 <script>
 export default {
-    name: "Estimation",
+    name: "Estimate",
+    methods: {
+        myEstimate() {
+            this.$router.push({
+                name: "Estimate",
+            });
+        },
+    },
 };
 </script>
 
-<style src="./Estimation.css" scoped></style>
+<style src="./Estimate.css" scoped></style>

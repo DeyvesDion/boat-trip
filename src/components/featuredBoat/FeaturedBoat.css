@@ -7,6 +7,9 @@
     margin-bottom: 60px;
 }
 
+.card-body .card-title {
+    text-transform: uppercase;
+}
 
 .btnLocation {
     background: #7451EB;

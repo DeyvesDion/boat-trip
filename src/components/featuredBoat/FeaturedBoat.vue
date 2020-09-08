@@ -12,6 +12,7 @@
                     :key="index"
                 >
                     <div
+                        @click="rental(boat.name)"
                         class="card mb-2"
                         style="max-width: 50rem; cursor:pointer"
                     >
@@ -25,7 +26,10 @@
                             <p class="card-text">
                                 {{ boat.description }}
                             </p>
-                            <b-button class="btnLocation" href="#"
+
+                            <b-button
+                                @click="rental(boat.name)"
+                                class="btnLocation"
                                 >Louer</b-button
                             >
                         </div>
@@ -42,6 +46,12 @@ export default {
     computed: {
         boats() {
             return this.$store.state.boats;
+        },
+    },
+    methods: {
+        rental(boatType) {
+            // bT:boat type you can seen on rooter/index.js
+            this.$router.push({ name: "BoatRental", params: { bT: boatType } });
         },
     },
 };

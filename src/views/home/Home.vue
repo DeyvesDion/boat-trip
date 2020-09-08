@@ -3,18 +3,16 @@
         <Banner />
         <FeaturedBoat />
         <FeaturedDestinations />
-        <Estimation />
-        <Footer />
+        <Estimate />
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Banner from "@/components/Banner/Banner.vue";
+import Banner from "@/components/banner/Banner.vue";
 import FeaturedBoat from "@/components/featuredBoat/FeaturedBoat.vue";
 import FeaturedDestinations from "@/components/featuredDestinations/FeaturedDestinations.vue";
-import Estimation from "@/components/estimation/Estimation.vue";
-import Footer from "@/components/footer/Footer.vue";
+import Estimate from "@/components/estimate/Estimate.vue";
 
 export default {
     name: "Home",
@@ -22,8 +20,7 @@ export default {
         Banner,
         FeaturedBoat,
         FeaturedDestinations,
-        Estimation,
-        Footer,
+        Estimate,
     },
 };
 </script>

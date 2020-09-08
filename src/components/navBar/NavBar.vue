@@ -2,15 +2,13 @@
     <div>
         <header>
             <div class="logoSection">
-                <!-- <a href="#" class="logo"
+                <router-link to="/" class="logo"
                     ><img
                         src="./logo.png"
                         class="logoIcon"
                         alt="logo icon"
-                    />Boat trip</a
-                > -->
-                <img src="./logo.png" class="logoIcon" alt="logo icon" />
-                <router-link to="/" class="logo">Boat trip</router-link>
+                    />Boat trip</router-link
+                >
             </div>
             <div class="toggle" onclick="toggleMenu()"></div>
             <ul class="menu">
@@ -46,7 +44,7 @@
                         >Aide</router-link
                     >
                 </li>
-                <li class="navItemV">
+                <li class="navItem">
                     <router-link
                         to="/contact"
                         class="navLink"

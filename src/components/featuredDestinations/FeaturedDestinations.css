@@ -80,3 +80,7 @@
 .featuredDestinationsLits .featuredDestinationsLitsCard {
     margin-bottom: 60px;
 }
+
+.card-body .card-title {
+    text-transform: uppercase;
+}
