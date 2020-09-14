@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home/Home.vue'
+import Search from '../views/search/Search.vue'
 import RegisterBoat from '../views/registerBoat/RegisterBoat.vue'
 import Connection from '../views/connection/Connection.vue'
 import Registration from '../views/registration/Registration.vue'
@@ -43,6 +44,12 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    // sD: search destination
+    path: '/louer-un-bateau/recherche/ville/:sD',
+    name: 'Search',
+    component: Search
   },
   {
     // bT:boat type

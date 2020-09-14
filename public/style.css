@@ -1,0 +1,38 @@
+/* Datepicker style */
+.form-item-datePicker {
+    width: 200px;
+    margin: 5px;
+    border: solid 2px #7451EB;
+    border-radius: 1px;
+}
+
+.form-item-datePicker :focus,
+.form-item-datePicker:active {
+    outline: 0;
+    border: transparent;
+}
+
+.fa {
+    color: #7451EB;
+}
+
+.input-group-text {
+    border: none;
+    border-radius: 1px !important;
+    background-color: #fff !important;
+    height: 44px !important;
+}
+
+.form-control {
+    height: auto !important;
+    border-left: 2px solid #7451EB !important;
+    border-radius: 1px !important;
+    background-color: #fff !important;
+    outline: none !important;
+}
+
+.form-control :focus,
+.form-control :active {
+    outline: none !important;
+    border: transparent !important;
+}

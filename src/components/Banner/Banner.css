@@ -17,6 +17,15 @@
     text-align: center;
 }
 
+.error {
+    color: red;
+    list-style: none;
+}
+
+.error li {
+    list-style: none;
+}
+
 .banner .bannerTitle {
     color: #fff;
     font-size: 65px;
@@ -40,18 +49,6 @@
 
 .form-item:focus,
 .form-item:active {
-    outline: none;
-}
-
-.form-item-datepicker {
-    width: 200px;
-    margin: 5px;
-    border: solid 2px #7451EB;
-    border-radius: 1px;
-}
-
-.form-item-datepicker:focus,
-.form-item-datepicker:active {
     outline: none;
 }
 

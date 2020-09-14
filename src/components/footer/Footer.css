@@ -1,12 +1,63 @@
 .footer {
-    height: 80vh;
+    height: auto;
     background-color: #000;
     color: #fff;
-    padding: 50px 30px;
+    padding: 50px 50px;
+    bottom: 0;
+    /* position: fixed;
+    flex-shrink: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 900px; */
 }
 
 .footer h4 {
     font-size: 16px;
     font-weight: 700px;
     margin-bottom: 30px;
+}
+
+.socialList,
+.boatList,
+.destinationList {
+    list-style-type: none;
+    padding-left: 0 !important;
+    /* display: flex;
+    text-align: left;
+    justify-content: space-between; */
+}
+
+.socialList li a,
+.boatList li a,
+.destinationList li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.fab {
+    margin-right: 10px;
+}
+
+.fa-facebook:before {
+    content: "\f09a";
+    font-size: 30px;
+    color: #3b5998;
+}
+
+.fa-twitter-square:before {
+    content: "\f081";
+    font-size: 30px;
+    color: #00acee;
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+    font-size: 30px;
+    color: #8a3ab9;
+}
+
+.boatList :hover,
+.destinationList :hover {
+    text-decoration: underline;
 }
