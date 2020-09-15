@@ -1,5 +1,18 @@
-/* Datepicker style */
-.form-item-datePicker {
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Montserrat", "sans-serif";
+ }
+
+ .custom-control-label {
+     cursor: pointer !important;
+ }
+
+ /* Datepicker style */
+ /* .form-item-datePicker {
     width: 200px;
     margin: 5px;
     border: solid 2px #7451EB;
@@ -35,4 +48,4 @@
 .form-control :active {
     outline: none !important;
     border: transparent !important;
-}
+} */

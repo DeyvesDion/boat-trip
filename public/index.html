@@ -13,19 +13,13 @@
             crossorigin="anonymous"
         />
         <link rel="icon" href="./navBar/logo.png" />
-        <!-- <link rel="stylesheet" href="./navBar/navBar.css" /> -->
         <title>Boat trip | Location de bateau</title>
     </head>
 
     <body>
         <div id="app"></div>
-        <!-- SearchFilter radio style -->
-        <style>
-            .custom-control-label {
-                cursor: pointer !important;
-            }
-        </style>
         <!-- built files will be auto injected -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             // Start NavBar js script
             window.addEventListener("scroll", function() {
@@ -39,6 +33,13 @@
                 menu.classList.toggle("active");
             }
             // End NavBar js script
+
+            // var debut;
+            // $("#debut").on("change", function() {
+            //     debut = $(this).val();
+            //     $("#fin").prop("min", function() {
+            //         return debut;
+            //     })
+            // });
         </script>
-    </body>
 </html>

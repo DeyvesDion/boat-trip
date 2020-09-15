@@ -1,0 +1,82 @@
+.error {
+    color: red;
+    list-style: none;
+}
+
+.error li {
+    list-style: none;
+}
+
+.bannerTitle {
+    color: #fff;
+    font-size: 65px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.bannerSubTitle {
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.form-item {
+    width: 200px;
+    margin: 5px;
+    border: solid 2px #7451EB;
+    border-radius: 1px;
+}
+
+.form-item:focus,
+.form-item:active {
+    outline: none;
+}
+
+.boatType {
+    height: 48px;
+}
+
+.search-box {
+    padding: 10px;
+}
+
+.search-btn {
+    background: #7451EB;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #fff;
+    color: #7451EB;
+    border: solid 2px #7451EB;
+}
+
+.form-box {
+    display: flex;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px 50px;
+
+}
+
+input[type="date"]:not(:valid):before {
+    content: attr(placeholder);
+}
+
+.fas {
+    padding-top: 14px;
+    color: #7451EB;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+input::placeholder {
+    text-align: center;
+    color: #7451EB;
+}
+
+input {
+    color: #7451EB;
+}
