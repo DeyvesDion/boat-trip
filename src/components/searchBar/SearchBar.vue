@@ -9,80 +9,35 @@
             <form>
                 <div>
                     <div class="form-box">
+                        <label for="destination">
+                        <!-- <i class="fas fa-map-marker-alt"></i>  -->
+                        </label>
                         <input
                             v-model.trim="formDestination.destination"
-                            type="text"
+                            type="text" name="destination" id="destination"
                             class="search-box form-item"
                             title="Ville de destination"
                             placeholder="Paris, Corse, Marseille..."
                         />
                         <!-- Datepicker --> 
                         <label for="debut">
-                        <i class="fas fa-calendar-alt"></i>        
+                        <!-- <i class="fas fa-calendar-check"></i>     -->
                         </label>
-                        <input @click="selectDate" placeholder="Début réservation" type="text" name="debut" id="debut" max="" onfocus="(this.type='date')"  class="form-item">
+                        <input v-model="formDestination.startOfReservation" @click="selectDate" placeholder="Début réservation" type="text" name="debut" id="debut" max="" onfocus="(this.type='date')"  class="form-item">
                         <label for="fin">
-                        <i class="fas fa-calendar-alt"></i>        
+                        <!-- <i class="fas fa-calendar-times"></i>       -->
                         </label>
-                        <input @click="selectDate" placeholder="Fin réservation" type="text" name="fin" id="fin" min="" onfocus="(this.type='date')"  class="form-item">
-                        <!-- <input type="date" placeholder="Date" required> -->
-                        <!-- <datepicker placeholder="Début réservation"
-                             v-model="formDestination.startOfReservation"
-                            :bootstrap-styling="true"
-                            :format="DatePickerFormat"
-                            :disabledDates="disabledDates"
-                            class="form-item-datePicker"
-                            :calendar-button="true"
-                            :language="fr"
-                            calendar-button-icon="fa fa-calendar"
-                            title="Début de réservation"
-                            > -->
-                        <!-- </datepicker> -->
-                         <!-- <datepicker placeholder="Fin réservation"
-                            v-model="formDestination.endOfReservation"
-                            :bootstrap-styling="true"
-                            :format="DatePickerFormat"
-                            :disabledDates="disabledDates"
-                            class="form-item-datePicker"
-                            :calendar-button="true"
-                            :language="fr"
-                            calendar-button-icon="fa fa-calendar"
-                            title="Fin de réservation"
-                            >
-                        </datepicker> -->
-                        <!-- <b-form-datepicker
-                            v-model="formDestination.startOfReservation"
-                            id="datepicker-dateformat"
-                            :date-format-options="{
-                                year: 'numeric',
-                                month: 'numeric',
-                                day: 'numeric',
-                            }"
-                            Default: true
-                            locale="fr"
-                            class="form-item-datepicker"
-                            title="Début de réservation"
-                            placeholder="Début"
-                        ></b-form-datepicker> -->
-                        <!-- <b-form-datepicker
-                            v-model="formDestination.endOfReservation"
-                            id="datepicker-dateformat1"
-                            :date-format-options="{
-                                year: 'numeric',
-                                month: 'numeric',
-                                day: 'numeric',
-                            }"
-                            locale="fr"
-                            class="form-item-datepicker"
-                            title="Fin de réservation"
-                            placeholder="Fin"
-                        ></b-form-datepicker> -->
-
-                        <b-form-select
-                            v-model="formDestination.boatType"
-                            :options="boatsType"
-                            class="form-item boatType"
-                        ></b-form-select>
+                        <input v-model="formDestination.endOfReservation" @click="selectDate" placeholder="Fin réservation" type="text" name="fin" id="fin" min="" onfocus="(this.type='date')"  class="form-item">
+                        <label for="boatType">
+                            <!-- <i class="fas fa-ship"></i> -->
+                        </label>
+                        <select style="color:#7451EB;" class="form-item boatType" name="boatType" id="boatType">
+                            <option value="" disabled selected hidden>Types de bateaux</option>
+                            <option value="voilier">Voilier</option>
+                            <option value="bateau-a-moteur">Bateau à moteur</option>
+                            <option value="catamaran">Catamaran</option>
+                            <option value="semi-rigide">Semi-rigide</option>
+                        </select>
                         <input
                             @click.prevent="search(formDestination.destination)"
                             type="submit"
@@ -103,17 +58,12 @@
 </template>
 
 <script>
-// import Datepicker from 'vuejs-datepicker';
-// import {fr, es} from 'vuejs-datepicker/dist/locale'
 export default {
     name:"SearchBar",
       components: {
-        // Datepicker,
     },
      data() {
         return {
-            // fr: fr,
-            // es: es,
             errors: [],
             formDestination: {
                 destination: null,
@@ -121,10 +71,6 @@ export default {
                 endOfReservation: null,
                 boatType: null,
             },
-        // DatePickerFormat: 'dd/MM/yyyy',
-        // disabledDates: {
-        //   to: new Date(Date.now() - 8640000),
-        // }
         };
     },
      computed: {
@@ -136,15 +82,18 @@ export default {
           selectDate(){
                var today = new Date().toISOString().split('T')[0];
                document.getElementsByName("debut")[0].setAttribute('min', today);
+               document.getElementsByName("fin")[0].setAttribute('min', today);
             let debut;
             $("#debut").on("change", function() {
                 debut = $(this).val();
                 $("#fin").prop("min", function() {
                     return debut;
                 })
+                
             });
-            let fin;
+            let fin;            
             $("#fin").on("change", function() {
+               document.getElementsByName("fin")[0].setAttribute('min', today);
                 fin = $(this).val();
                 $("#debut").prop("max", function() {
                     return fin;
@@ -153,14 +102,22 @@ export default {
           },
         search(searchDestination) {
             let search = this.formDestination.destination;
-            let pp=this.formDestination.startOfReservation;
+            let start= this.formDestination.startOfReservation;
+            let end=this.formDestination.endOfReservation;
                
                 if (search) {
         this.$router.push({ name: "Search", params: { sD: searchDestination } });
+        console.log(start)
       }
       this.errors = [];
        if (!search) {
         this.errors.push('La destination est réquise.');
+      }
+       if (!start) {
+        this.errors.push('Le début de la location est réquise.');
+      }
+      if (!end) {
+        this.errors.push('La fin de la location est réquise.');
       }
                
         },

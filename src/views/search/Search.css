@@ -16,6 +16,18 @@
     display: flex;
 }
 
+.boatList {
+    width: 200rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 370px;
+    margin: 10px;
+    cursor: pointer;
+}
+
 .searchFilter {
     width: 850px;
     margin-right: 30px;
@@ -53,9 +65,77 @@
     padding: 25px;
 }
 
+.boatType {
+    margin: 5px;
+    cursor: pointer;
+}
+
+small {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h4 {
+    text-transform: capitalize;
+}
+
+.priseValue {
+    display: flex;
+    padding: 0;
+}
+
+.priseValue span {
+    font-weight: bold;
+    margin-top: -3px;
+}
+
+span:nth-child(2n)::after {
+    content: "-";
+    font-weight: bold;
+
+}
+
+/* searchFilter */
+.boatType {
+    margin: 5px;
+    cursor: pointer;
+}
+
+small {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h4 {
+    text-transform: capitalize;
+}
+
+.priseValue {
+    display: flex;
+    padding: 0;
+}
+
+.priseValue span {
+    font-weight: bold;
+    margin-top: -3px;
+}
+
+span:nth-child(2n)::after {
+    content: "-";
+    font-weight: bold;
+
+}
+
 /* Responsive */
 @media (max-width: 1040px) {
     .searchFilter {
         display: none;
+    }
+
+
+
+    .card {
+        max-width: 50rem;
+        /* margin-left: 0; */
     }
 }

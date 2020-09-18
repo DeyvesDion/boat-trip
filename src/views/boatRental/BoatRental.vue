@@ -1,24 +1,6 @@
 <template>
-    <div>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rem
-            obcaecati animi dolorum nam facere nostrum, nihil illum eveniet,
-            iure fugiat a? A temporibus qui distinctio velit ipsam aliquam,
-            dignissimos ea, ab deleniti debitis expedita, dicta in enim ad!
-            Consectetur sunt, sapiente ullam repellat recusandae doloribus modi
-            iste a in repellendus asperiores accusamus eaque perferendis
-            quibusdam. Esse ullam laborum facilis nihil minima modi velit
-            dolorem quas. Ipsum harum delectus mollitia perspiciatis eius
-            consectetur modi, facilis consequatur hic adipisci voluptas
-            provident autem quasi laboriosam. Exercitationem quod, non excepturi
-            ullam veritatis, recusandae quia laudantium eos eveniet similique
-            quisquam, perspiciatis tempore ratione rerum cupiditate iusto
-            deleniti quidem praesentium debitis saepe adipisci rem amet!
-            Temporibus deleniti libero beatae quas dolorem laudantium esse
-            debitis nostrum provident consequuntur! Laudantium exercitationem,
-            consequatur non quo illo repudiandae. Location bateau 
-            <h2>{{getBoatType}}</h2>
-        </p>
+    <div style="margin-top:260px">
+        <h2>Location de {{ getBoatType }}</h2>
     </div>
 </template>
 
@@ -27,8 +9,8 @@ export default {
     name: "BoatRental",
     data() {
         return {
-             // bT:boat type you can seen on rooter/index.js
-            getBoatType: this.$route.params.bT
+            // bT:boat type you can seen on rooter/index.js
+            getBoatType: this.$route.params.bT,
         };
     },
 };

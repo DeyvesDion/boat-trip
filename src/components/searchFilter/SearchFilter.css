@@ -1,7 +1,32 @@
-.custom-control-label {
+/* .custom-control-label {
     cursor: pointer !important;
+} */
+/* .boatType {
+    margin: 5px;
+    cursor: pointer;
+}
+
+small {
+    cursor: pointer;
+    font-size: 16px;
 }
 
 h4 {
     text-transform: capitalize;
 }
+
+.priseValue {
+    display: flex;
+    padding: 0;
+}
+
+.priseValue span {
+    font-weight: bold;
+    margin-top: -3px;
+}
+
+span:nth-child(2n)::after {
+    content: "-";
+    font-weight: bold;
+
+} */

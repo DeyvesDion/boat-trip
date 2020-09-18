@@ -15,6 +15,8 @@ export default new Vuex.Store({
     boats: [
       {
         name: "voilier",
+        prix: 150,
+        type: "voilier",
         description:
           "Louez votre voilier à un particulier ou un loueur professionnel.",
         imgUrl: "http://www.evasion-yachting.com/site/images/normal/Bateaux-Bavaria-Voiliers-Cruiser-34,-Easy-9.75878e3bbdcb4d.jpg",
@@ -23,6 +25,8 @@ export default new Vuex.Store({
 
       {
         name: "bateau a moteur",
+        prix: 360,
+        type: "bateau à moteur",
         description:
           "La location de bateau à moteur entre particuliers et à un professionnel n’a jamais été aussi simple.",
         imgUrl: "https://images.unsplash.com/photo-1538422497454-081f9b0edf0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80",
@@ -30,6 +34,8 @@ export default new Vuex.Store({
       },
       {
         name: "catamaran",
+        prix: 180,
+        type: "catamaran",
         description:
           "Louez votre Catamaran à un particulier ou un loueur professionnel.",
         imgUrl: "https://images.unsplash.com/photo-1581271164789-7c97932822d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
@@ -37,6 +43,8 @@ export default new Vuex.Store({
       },
       {
         name: "semi-rigide",
+        prix: 250,
+        type: "semi-rigide",
         description:
           "Louez votre Semi-rigide à un particulier ou un loueur professionnel.",
         imgUrl: "https://www.accostagelocation.fr/public/img/big/LOCATIONBATEAUPORQUEROLLESjpg_5c6669b98745f.jpg",
